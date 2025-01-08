@@ -9,12 +9,12 @@ var dogs = localStorage.getItem("dogs") || [
         
     },
     {
-        name:"rex",
+        name:"charles",
         age:3,
         weight:20,
         vaccine:"true",
         breed:"Golden retriver",
-        image:"../images/golden retriver.jpg"
+        image:"../images/golden retriver.jbluepg"
     },
     {
         name:"doudou",
@@ -52,35 +52,8 @@ var dogs = localStorage.getItem("dogs") || [
 
 ]
 
-var newArray={ name:"diablo",
-    age:3,
-    weight:20,
-    vaccine:"true",
-    breed:"doberman",
-    image:"../images/doberman.webp"
-}
-<<<<<<< HEAD
-var dog1=("rex",3,20,"true","German shepherd")
-var dog2=("charles",1,6,"true","Golden retriver")
-var dog3=("doudou",2,3,"true","Havanese")
-var dog4=("blue",2,25,"true","husky")
-var dog5=("miky",2,10,"false","rod")
-var dog6=("diablo",3,20,"true","doberman")
-=======
->>>>>>> c533414a17f22e85722798ffff2c59b1e5a15651
 
-
-
-
-<<<<<<< HEAD
-
-$("#add").on("click",function () {
-
-    window.location.href ='adddog.html';
-})
-
-=======
-/**dogs.map(function (element) {
+dogs.map(function (dog) {
     $(".listDogs").append(` <div class="dog-card">
       <img src="${element.image}">
     <h3>${element.name}</h3>
@@ -93,4 +66,14 @@ $("#add").on("click",function () {
 })
 
 
->>>>>>> c533414a17f22e85722798ffff2c59b1e5a15651
+
+
+
+$("#add").on("click",function () {
+
+    window.location.href ='adddog.html';
+})
+
+
+
+

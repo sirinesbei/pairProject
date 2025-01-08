@@ -1,4 +1,8 @@
-var dogs = localStorage.getItem("dogs") || [
+
+
+var touhemi = JSON.parse(localStorage.getItem('data')) || []
+
+var dogs =[
     {
         name:"rex",
         age:3,
@@ -49,38 +53,33 @@ var dogs = localStorage.getItem("dogs") || [
         breed:"doberman",
         image:"../images/doberman.webp"
     }
-
 ]
 
-
-dogs.map(function (dog) {
-    $(".listDogs").append(` <div class="dog-card">
-      <img src="${element.image}">
-    <h3>${element.name}</h3>
-    
-    
-    </div>
-    `
-       
-    )
-})
-
-
-
 var button = document.getElementById("search");
-var divs = document.getElementsByClassName("prd");
+        var dogs = document.getElementsByClassName("dog-card");
 
-button.onclick = function () {
-  var input = document.getElementById("search").value.toLowerCase();
-  var divs = document.getElementsByClassName("dog-card");
+        button.onclick = function () {
+            var input = document.getElementById("breed").value.toLowerCase();
 
-  for (var i = 0; i < divs.length; i = i + 1) {
-    if (divs[i].textContent.toLowerCase().includes(input)) {
-      divs[i].style.display = "block";
-    } else divs[i].style.display = "none";
-  }
+            for (var i = 0; i < dogs.length; i++) {
+                var breed = dogs[i].getElementsByTagName("p")[0].textContent.toLowerCase();
 
-};
+                if (breed.includes(input)) {
+                    dogs[i].style.display = "block";
+                } else {
+                    dogs[i].style.display = "none";
+                }
+            }
+        };
+
+        //search worked ///
+
+
+  
+
+
+
+
 
 
 

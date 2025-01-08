@@ -1,5 +1,5 @@
 nav{ 
-    background-color: rgb(203, 171, 213);
+    background-color: rgb(226, 217, 228);
     padding: 10px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -18,5 +18,21 @@ margin-top: 0px;}
     text-align:left;
 }
 body{
-    background-image: url(../images/homebckg.jpg);
+    background-color: #b89bbc;
+}
+
+.dog-card{
+    border: 1px solid #d074ef;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.dog-image{
+    width: 100%;
+    height: auto;
+    border: 8px;
 }

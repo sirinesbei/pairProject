@@ -67,12 +67,20 @@ dogs.map(function (dog) {
 
 
 
+var button = document.getElementById("search");
+var divs = document.getElementsByClassName("prd");
 
+button.onclick = function () {
+  var input = document.getElementById("search").value.toLowerCase();
+  var divs = document.getElementsByClassName("dog-card");
 
-$("#add").on("click",function () {
+  for (var i = 0; i < divs.length; i = i + 1) {
+    if (divs[i].textContent.toLowerCase().includes(input)) {
+      divs[i].style.display = "block";
+    } else divs[i].style.display = "none";
+  }
 
-    window.location.href ='adddog.html';
-})
+};
 
 
 

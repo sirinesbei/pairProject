@@ -61,10 +61,11 @@ $(document).ready(function () {
                 <strong>${dogs[i].breed}</strong><br>
                 <strong>Age: ${dogs[i].age}</strong><br>
                 <strong>Weight: ${dogs[i].weight}kg</strong><br>
-                
+<button class="remove-dog">🗑️</button>
+<button class="update-dog">✍️</button>
             </div>`);
     }
-});
+
 
 
 
@@ -81,6 +82,11 @@ $("#search").on("click", function () {
     })
 })
 
+$(".remove-dog").on("click", function () {
+
+ 
+    $(this).closest(".dog-card").hide(); 
+})
 
 
-
+});

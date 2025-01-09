@@ -16,12 +16,12 @@ var dogs = JSON.parse(localStorage.getItem('dogs')) || [
          image: "../images/rod.jpg" },
 
     { name: "Diablo", age: 3, weight: 20, vaccine: "true",
-         breed: "Doberman", image: "../images/doberman.webp" },
+         breed: "Doberman", image: "../images/carlin2.jpg" },
 ]
 
 
-$("#dogadd").on("click", function () {
-
+$("#dogadd").on("click", function (e) {
+e.preventDefault()
 var name = $("#dogname").val()
 
  var age = $("#dogage").val()
@@ -32,9 +32,10 @@ var name = $("#dogname").val()
 
     var vaccine = $("#dogvaccine").val()
 
-    var image = $("#dogimage")
+    var image = '../images/'+$("#dogimage")[0].value.split('\\').pop()
 
    
+console.log(image);
 
     var newDog = { name, age, breed, weight, vaccine, image}
 
@@ -47,9 +48,12 @@ var name = $("#dogname").val()
 
 
 $(document).ready(function () {
+
+
+
     $(".listDogs").empty();
 
-    for (let i = 0; i < dogs.length; i++) {
+    for (var i = 0; i < dogs.length; i++) {
         $(".listDogs").append(`
             <div class="dog-card">
                 <img src="${dogs[i].image}" alt="cute dog for adoption" class="dog-image" ><br>
@@ -57,6 +61,7 @@ $(document).ready(function () {
                 <strong>${dogs[i].breed}</strong><br>
                 <strong>Age: ${dogs[i].age}</strong><br>
                 <strong>Weight: ${dogs[i].weight}kg</strong><br>
+                
             </div>`);
     }
 });

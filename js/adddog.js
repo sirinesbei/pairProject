@@ -47,20 +47,22 @@ var name = $("#dogname").val()
 
 
 $(document).ready(function () {
-    $(".listDogs").empty() 
-    dogs.forEach((dog) => {
+    $(".listDogs").empty();
+
+    for (let i = 0; i < dogs.length; i++) {
         $(".listDogs").append(`
             <div class="dog-card">
-                <img src="${dog.image}" alt="cute dog for adoption" class="dog-image"><br>
-                <h3>${dog.name}</h3><br>
-                <strong>${dog.breed}</strong><br>
-                <strong>Age: ${dog.age}</strong><br>
-                <strong>Weight: ${dog.weight}kg</strong><br>
-                <strong id="vacc">Vaccination: ${dog.vaccine}</strong>
-                
-            </div>`)
-    })
-})
+                <img src="${dogs[i].image}" alt="cute dog for adoption" class="dog-image" ><br>
+                <h3>${dogs[i].name}</h3><br>
+                <strong>${dogs[i].breed}</strong><br>
+                <strong>Age: ${dogs[i].age}</strong><br>
+                <strong>Weight: ${dogs[i].weight}kg</strong><br>
+            </div>`);
+    }
+});
+
+
+
 
 
 $("#search").on("click", function () {
@@ -73,3 +75,7 @@ $("#search").on("click", function () {
         }
     })
 })
+
+
+
+

@@ -1,38 +1,125 @@
-nav{ 
-    background-color: rgb(226, 217, 228);
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+   
+    
+
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #760e93;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header #nav {
     display: flex;
-    justify-content:first baseline;
-    
-  
-    margin: 0 auto;
-    
-margin-top: 0px;}
-
-
-#logo #add{
-  text-align: right;
-}
-#breed #search{
-    text-align:left;
-}
-body{
-    background-color: #b89bbc;
+   
+    align-items: center;
+    max-width: 1200px;
+    margin: 10 auto;
+    padding: 0 20px;
 }
 
-.dog-card{
-    border: 1px solid #d074ef;
-    margin: 10px;
-    padding: 15px;
-    text-align: left;
+header #logo {
+    width: 100px; 
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 20px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header input, header button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+header input {
     width: 200px;
-    display: inline-block;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    font-size: 16px;
 }
-.dog-image{
+
+header button {
+    background-color: #c11db1;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color:#c367da;
+}
+
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.listDogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.dog-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dog-card:hover {
+    transform: translateY(-10px);
+}
+
+.dog-card img {
     width: 100%;
-    height: auto;
-    border: 8px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.dog-card h3 {
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.dog-card p {
+    padding: 0 15px 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+footer {
+    background-color: #771891;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
 }

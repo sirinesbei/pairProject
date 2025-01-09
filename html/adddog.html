@@ -2,40 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Adding Dog</title>
+    <link rel="stylesheet" href="/css/addformular.css">
 </head>
+
+
 <body>
+
+    
     <h1>Add Your Dog's Details</h1>
     <form id="dogForm">
 
-        
-        <label >Name:</label>
-        <input type="text" id="dogname" placeholder="Enter dog's name"><br><br>
+    <label>Name:</label>
+    <input type="text" id="dogname" placeholder="Enter dog's name"><br><br>
+<label>Age:</label>
 
-        <label >Age:</label>
-        <input type="number" id="dogage" placeholder="Enter dog's age"><br><br>
 
-        <label >Breed:</label>
-        <input type="text" id="dogbreed" placeholder="Enter dog's breed"><br><br>
+<input type="number" id="dogage" placeholder="Enter dog's age"><br><br>
+<label>Breed:</label>
 
-        <label >Weight:</label>
-        <input type="number" id="dogweight" placeholder="Enter dog's weight"><br><br>
+<input type="text" id="dogbreed" placeholder="Enter dog's breed"><br><br>
 
-        <label >Vaccine Status:</label>
-        <input type="text" id="dogvaccine" placeholder="Is your dog vaccinated?"><br><br>
+   <label>Weight:</label>
+    <input type="number" id="dogweight" placeholder="Enter dog's weight"><br><br>
 
-        <label >Input Your Dog's Photo:</label>
-        <input type="file" id="dogimage" accept="image/*"><br><br>
+   <label>Vaccine Status:</label>
+   <input type="text" id="dogvaccine" placeholder="Is your dog vaccinated?"><br><br>
+
+    <label>Input Your Dog's Photo:</label>
+    <input type="file" id="dogimage" accept="image/*"><br><br>
 
 
 
         <button type="button" id="dogadd">Add</button>
+
+
+
     </form>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="/js/home.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    
+    <script src="/js/index.js"></script>
+    <script src="/js/adddog.js"></script>
 </body>
 </html>
-

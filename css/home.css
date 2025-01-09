@@ -17,7 +17,7 @@ body {
 
 
 header {
-    background-color: #760e93;
+    background-color: #ad9eb8;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -60,7 +60,7 @@ header input {
 }
 
 header button {
-    background-color: #c11db1;
+    background-color: #4B0082;
     color: white;
     cursor: pointer;
 }
@@ -85,7 +85,8 @@ main {
 }
 
 .dog-card {
-    background-color: white;
+    background-color: #f1e9f7;
+  
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -117,9 +118,16 @@ main {
 
 
 footer {
-    background-color: #771891;
+    background-color: #ad9eb8;
     color: white;
     padding: 10px 0;
     text-align: center;
     margin-top: 20px;
+}
+.dog-card h3{
+    color: #4B0082;
+    text-transform: uppercase;
+}
+.dog-card #vacc{
+    color:green;
 }

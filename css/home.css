@@ -117,15 +117,98 @@ main {
 }
 
 
-footer {
+
+
+
+#footer {
     background-color: #ad9eb8;
-    color: white;
-    padding: 10px 0;
+    color: #ffffff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #footer h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  #footer p,
+  #footer li,
+  #footer span {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+  
+  #footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #footer li {
+    margin-bottom: 10px;
+  }
+  
+  #footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #footer a:hover {
+    color: #ffeeba;
+    text-decoration: underline;
+  }
+  
+  .about, .socialmedia, .copyright {
+    flex: 1 1 300px;
+    margin: 10px;
+  }
+  
+  .about p {
+    margin-bottom: 20px;
+  }
+  
+  .socialmedia a {
+    margin: 0 10px;
+  }
+  
+  .copyright {
     text-align: center;
     margin-top: 20px;
-}
-.dog-card h3{
-    color: #4B0082;
-    text-transform: uppercase;
+    font-size: 0.85em;
+    color: #e6e6e6;
+  }
+  
+  @media (max-width: 768px) {
+    #footer .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #footer .socialmedia, 
+    #footer .about {
+      text-align: center;
+    }
+  }
+  
+  #home-link {
+    text-decoration: none;
+    color: purple;
+    font-size: 18px;
+    margin: 10px;
 }
 
+#home-link:hover {
+    text-decoration: underline;
+    color: darkpurple;
+}

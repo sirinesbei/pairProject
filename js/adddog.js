@@ -1,10 +1,10 @@
 
 var dogs = JSON.parse(localStorage.getItem('dogs')) || [
     { name: "Rex", age: 3, weight: 20, vaccine: "true",
-         breed: "German shepherd", image: "../images/berger almand.jpg" },
+         breed: "German shepherd", image: "..\images\bergeralmand.jpg" },
          
     { name: "Charles", age: 1, weight: 20, vaccine: "true", breed: "Golden retriever",
-         image: "../images/golden retriver.jpg" },
+         image: "../images/goldenretriver.jpg" },
 
 
     { name: "Doudou", age: 1, weight: 20, vaccine: "true", breed: "Havanese",
@@ -16,7 +16,7 @@ var dogs = JSON.parse(localStorage.getItem('dogs')) || [
          image: "../images/rod.jpg" },
 
     { name: "Diablo", age: 3, weight: 20, vaccine: "true",
-         breed: "Doberman", image: "../images/carlin2.jpg" },
+         breed: "Doberman", image: "../images/doberman.webp" },
 ]
 
 
@@ -56,13 +56,19 @@ $(document).ready(function () {
     for (var i = 0; i < dogs.length; i++) {
         $(".listDogs").append(`
             <div class="dog-card">
+
                 <img src="${dogs[i].image}" alt="cute dog for adoption" class="dog-image" ><br>
+
                 <h3>${dogs[i].name}</h3><br>
+
                 <strong>${dogs[i].breed}</strong><br>
+
                 <strong>Age: ${dogs[i].age}</strong><br>
+
                 <strong>Weight: ${dogs[i].weight}kg</strong><br>
-<button class="remove-dog">🗑️</button>
-<button class="update-dog">✍️</button>
+
+                <button class="remove-dog">✖️</button>
+
             </div>`);
     }
 

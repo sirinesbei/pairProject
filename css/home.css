@@ -120,11 +120,12 @@ main {
 
 
 
-#footer {
+ #footer {
     background-color: #ad9eb8;
     color: #ffffff;
     padding: 40px 0;
     font-family: Arial, sans-serif;
+    text-align: center;
   }
   
   #footer .container {
@@ -211,4 +212,6 @@ main {
 #home-link:hover {
     text-decoration: underline;
     color: darkpurple;
-}
+} 
+
+

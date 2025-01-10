@@ -1,7 +1,7 @@
 
 var dogs = JSON.parse(localStorage.getItem('dogs')) || [
     { name: "Rex", age: 3, weight: 20, vaccine: "true",
-         breed: "German shepherd", image: "..\images\bergeralmand.jpg" },
+         breed: "German shepherd", image: "../images/bergeralmand.jpg" },
          
     { name: "Charles", age: 1, weight: 20, vaccine: "true", breed: "Golden retriever",
          image: "../images/goldenretriver.jpg" },
@@ -36,14 +36,20 @@ var name = $("#dogname").val()
 
    
 console.log(image);
+if (name&&age&&breed&&weight&&vaccine&&image.length>10){
 
-    var newDog = { name, age, breed, weight, vaccine, image}
-
+    var newDog = { name, age, breed, weight, vaccine,image}
+    
     dogs.push(newDog)
-
+    
     localStorage.setItem("dogs", JSON.stringify(dogs))
-
+    
     window.location.href = "home.html"
+}
+else{
+    alert('missing details')
+}
+
 })
 
 
